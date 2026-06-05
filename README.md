@@ -73,34 +73,6 @@ SQLAlchemy        EDA (Matplotlib   Seasonal PUE
 
 ---
 
-## SQL Queries
-
-```sql
--- Average power consumption per device
-SELECT equipment_id, ROUND(AVG(power_kw), 2) AS avg_power
-FROM fact_metrics
-GROUP BY equipment_id ORDER BY avg_power DESC;
-
--- Average temperature per room
-SELECT l.room_name, ROUND(AVG(f.temperature), 2) AS avg_temp
-FROM fact_metrics f
-JOIN dim_location l ON f.location_id = l.location_id
-GROUP BY l.room_name;
-
--- Average downtime by severity
-SELECT severity, ROUND(AVG(downtime_minutes), 2)
-FROM fact_incidents
-GROUP BY severity;
-
--- Top 5 devices by incident count
-SELECT equipment_id, COUNT(*) AS incidents
-FROM fact_incidents
-GROUP BY equipment_id
-ORDER BY incidents DESC LIMIT 5;
-```
-
----
-
 ## Possible Future Developments
 
 - Integration with real-time sensor data via IoT
