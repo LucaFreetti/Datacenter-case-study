@@ -115,4 +115,6 @@ ORDER BY incidents DESC LIMIT 5;
 |---|---|
 | `notebook.ipynb` | Full Python pipeline: data generation, EDA, DB loading |
 | `Dataset.sql` | PostgreSQL schema + INSERT statements + analytical queries |
-| `Medielettra_project_LucaFrittitta.pdf` | Project summary with dashboard screenshots |
+| `Medielettra_project_.pdf` | Project summary with dashboard screenshots |
+| `Dashboard_DC.pbix` | PowerBi Dashboard |
+
